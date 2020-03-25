@@ -1,0 +1,40 @@
+Git
+windows安装
+安装一路next
+
+测试安装
+Cmd命令测试 git –version
+
+
+下载
+git clone url
+
+设置用户名
+git config –global user.name 
+设置邮箱
+git config –gloabal user.email
+
+将文件上传到github
+-----------------------------------------------
+
+1、注册github 账号
+2、创建一个资源库
+your profile -repositories - new 
+3、打开需要上传的路径
+4、初始化 git init
+5、添加文件 git add .  添加所有文件
+6、上传地址 git remote add origin url（github 资源库url 地址）
+https: url
+ssh:  ssh 是github自己的传输协议，速度更快，如果需要用ssh协议，需要将ssh的keygen添加到github
+创建ssh keygen 确定 C盘用户下面有没有 .ssh
+
+打开 git bash - ssh-keygen  一路next 
+
+7、提交文件到缓存区  git commit -m "note"
+8、git push -u origin mastet
+
+
+
+
+生成密钥
+

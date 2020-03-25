@@ -1,0 +1,100 @@
+﻿集中式、分布式版本控制
+svn  git
+
+1、安装Git
+
+windows:
+1、https://git-scm.com/downloads1	34
+2、exe程序安装
+
+
+//填写用户名
+$ git config --global user.name "Your Name"
+//填写邮箱
+$ git config --global user.email "hei-nan@hotmail.com"
+
+
+2、创建版本库 - repository
+
+1) cd dir
+2) git init
+3) git add <somefile>  
+4) git conmmit -m "somenote"
+
+
+3、修改文件
+1) git status
+2) git diff
+3) git add < somefile>
+4) git commit  -m ""
+
+
+4、版本回退
+1) git log 
+2) git reset --hard version
+3) git reflog
+
+
+5、git 暂存区
+
+
+6、撤销操作
+1) git checkout -- filename
+
+
+7、删除文件
+1) git rm -- filename
+
+
+
+8、添加到远程
+
+1、创建项目，并且添加到版本控制
+2、创建github 账号，创建git 的 repositories,
+3、create ssh password   ssh-keygen -t rsa -C "hei-nan@hotmail.com"  add ssh keygen  to github account
+4、 git remote add origin git@github.com:76351506/test.git
+5、git push -u origin master
+
+
+9、克隆远程库
+1) git cline  git@github.com:michaelliao/gitskills.git
+2) cd gitskills
+
+
+
+10、创建&合并分支
+git checkout -b dev 创建并切换 dev 分支
+git branch  查看分支状态
+git merge dev  合并dev分支
+git branch -d dev 删除dev 分支
+
+
+11、解决冲突
+冲突是怎么发生的？ 修改相同文件，相同位置
+
+手动解决问题
+git add . 
+git commit -m ""
+
+
+12、bug 分支
+
+git checkout master
+git stash
+git checkout -b issue-101
+git add .
+git commit -m ""
+git checkout master
+git merge --no-ff -m "merged bug fix 101" issue-101
+git branch -d issue-101
+
+
+git checkout dev
+git stash apply
+//合并并删除 / 合并快照&删除快照
+git stash pop / git stash apply & git stash drop
+
+
+
+
+git pull origin master --allow-unrelated-histories
